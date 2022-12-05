@@ -27,7 +27,7 @@ def get_segments(model, binary_image, max_size=1024):
         cityscapes.cityscapes_category_ids_to_category_colors(
             np.squeeze(
                 np.argmax(
-                    model.predict(np.expand_dims(input_image, 0)), axis=-1
+                    model.predict(np.expand_dims(resized_image, 0)), axis=-1
                 )
             )
         )
