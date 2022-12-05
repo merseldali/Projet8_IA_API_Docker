@@ -4,7 +4,7 @@ import tensorflow as tf
 
 from PIL import Image
 
-from . import cityscapes
+import cityscapes
 
 
 
