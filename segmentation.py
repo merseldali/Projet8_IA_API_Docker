@@ -11,7 +11,7 @@ import cityscapes
 
 def get_segmentator():
 
-    model = tf.keras.models.load_model('models/best_model.h5')
+    model = tf.keras.models.load_model('models/best_model.h5', custom_objects={'jaccard_loss':cityscapes.jaccard_loss})
 
     return model
 
