@@ -6,6 +6,8 @@ from PIL import Image
 
 import cityscapes
 
+import numpy as np
+
 
 
 
