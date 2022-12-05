@@ -1,0 +1,9 @@
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: Dockerfile
+  worker:
+    command:
+      - mlflow server --host 0.0.0.0
+    image: web
