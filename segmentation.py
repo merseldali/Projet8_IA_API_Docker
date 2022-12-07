@@ -39,10 +39,10 @@ def get_segments_by_id(model, image_id):
     labels_img_paths = []
     if image_id:
         input_img_paths = sorted(
-            Path(leftImg8bit_path).glob(f"**/*{image_id}*_leftImg8bit.png")
+            Path(leftImg8bit_path).glob(f"*{image_id}*_leftImg8bit.png")
         )
         labels_img_paths = sorted(
-            Path(gtFine_path).glob(f"**/*{image_id}*_color.png")
+            Path(gtFine_path).glob(f"*{image_id}*_color.png")
         )
     if (len(input_img_paths) == 0 or len(labels_img_paths) == 0):
         print("No image found!")
