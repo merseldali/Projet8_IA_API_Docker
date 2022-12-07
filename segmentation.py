@@ -3,7 +3,7 @@ import tensorflow as tf
 from PIL import Image
 import cityscapes
 import numpy as np
-
+from pathlib import Path
 
 def get_segmentator():
 
