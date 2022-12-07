@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File
 from starlette.responses import Response
 import io
-from segmentation import get_segmentator, get_segments
+from segmentation import get_segmentator, get_segments, get_segments_by_id
 
 model = get_segmentator()
 
