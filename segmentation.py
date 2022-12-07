@@ -4,6 +4,8 @@ from PIL import Image
 import cityscapes
 import numpy as np
 from pathlib import Path
+import base64
+
 
 def get_segmentator():
 
@@ -67,7 +69,7 @@ def get_segments_by_id(model, image_id):
     
     with open(labels_img_paths[0], "rb") as f:
         labels_img_read = f.read()
-        #labels_img_b64 = base64.b64encode(labels_img_read)
-        label_img = Image.open(labels_img_read).convert("RGB")
+        labels_img_b64 = base64.b64encode(labels_img_read)
+        label_img = Image.open(labels_img_b64).convert("RGB")
 
     return categories_img, label_img
