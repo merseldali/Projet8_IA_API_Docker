@@ -45,6 +45,7 @@ def get_segments_by_id(model, image_id):
             Path(gtFine_path).glob(f"**/*{image_id}*_color.png")
         )
     if (len(input_img_paths) == 0 or len(labels_img_paths) == 0):
+        print("No image found!")
         return None
         
     with open(input_img_paths[0], "rb") as f:
