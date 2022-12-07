@@ -34,10 +34,10 @@ def get_segmentation_map_by_id(image_id: int):
         # The zip compressor
         zf = zipfile.ZipFile(s, "w")
     
-        zip_file.writestr('predicted.png', bytes_io.getvalue())
-        zip_file.writestr('labels.png', bytes_io2.getvalue())
+        zf.writestr('predicted.png', bytes_io.getvalue())
+        zf.writestr('labels.png', bytes_io2.getvalue())
     
-        zip_file.close()
+        zf.close()
     
         return Response(s.getvalue(), media_type="application/x-zip-compressed")
     else:
