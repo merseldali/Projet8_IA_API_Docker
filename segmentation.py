@@ -46,7 +46,7 @@ def get_segments_by_id(model, image_id):
         )
     if (len(input_img_paths) == 0 or len(labels_img_paths) == 0):
         print("No image found!")
-        return None
+        return None, None
         
     with open(input_img_paths[0], "rb") as f:
         original_img_b64 = base64.b64encode(f.read())
