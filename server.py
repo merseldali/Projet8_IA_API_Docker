@@ -29,7 +29,7 @@ def get_segmentation_map_by_id(image_id: int):
         label_image.save(bytes_io2, format='PNG')
     
         # Open StringIO to grab in-memory ZIP contents
-        s = io.StringIO.StringIO()
+        s = io.StringIO()
         # The zip compressor
         zf = zipfile.ZipFile(s, "w")
     
