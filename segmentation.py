@@ -32,7 +32,7 @@ def get_segments(model, binary_image, max_size=1024):
 def get_segments_by_id(model, image_id):
     
     leftImg8bit_path = Path("data", "images")
-    gtFine_path = Path("data", "labels")
+    gtFine_path = Path("data", "colors")
 
     image_id = str(image_id)
     input_img_paths = []
