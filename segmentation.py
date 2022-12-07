@@ -55,7 +55,7 @@ def get_segments_by_id(model, image_id):
         original_img_b64_str = original_img_b64.decode("utf-8")
 
         input_img = Image.open(
-            BytesIO(base64.b64decode(original_img_b64))
+            io.BytesIO(base64.b64decode(original_img_b64))
         ).convert("RGB").resize(img_size)
         categories_img = Image.fromarray(
             cityscapes.cityscapes_category_ids_to_category_colors(
