@@ -40,4 +40,4 @@ def get_segmentation_map_by_id(image_id: int):
     
         return Response(s.getvalue(), media_type="application/x-zip-compressed")
     else:
-        return None
+        return Response()
