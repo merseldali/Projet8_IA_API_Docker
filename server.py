@@ -28,7 +28,7 @@ def get_segmentation_map_by_id(image_id: int):
         bytes_io = io.BytesIO()
         bytes_io2 = io.BytesIO()
         bytes_io3 = io.BytesIO()
-        raw_img.save(bytes_io2, format='PNG')
+        raw_img.save(bytes_io, format='PNG')
         segmented_image.save(bytes_io2, format='PNG')
         label_image.save(bytes_io3, format='PNG')
 
